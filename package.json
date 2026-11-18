@@ -1,7 +1,7 @@
 {
     "scripts": {
         "start": "tsx start.ts",
-        "generate": "python3 photo.py"
+        "generate": "python photo.py"
     },
     "dependencies": {
         "execa": "^7.1.1",

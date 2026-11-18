@@ -16,17 +16,23 @@ const sample = 1; // less for faster, bigger for smooth numbers
         deps: string[];
         version: string;
     }[] = [
-            { name: 'vanilla', deps: ['vue'], version: 'latest' },
-            { name: 'ant-design-vue', deps: ['ant-design-vue'], version: 'latest' },
-            { name: 'anu-vue', deps: ['anu-vue'], version: 'latest' },
-            { name: 'bootstrap-vue-next', deps: ['bootstrap-vue-next'], version: 'latest' },
-            { name: 'element-plus', deps: ['element-plus'], version: 'latest' },
-            { name: 'naive-ui', deps: ['naive-ui'], version: 'latest' },
-            { name: 'oku-ui', deps: ['@oku-ui/primitives'], version: 'latest' },
-            { name: 'quasar', deps: ['quasar'], version: 'latest' },
-            { name: 'radix-vue', deps: ['radix-vue'], version: 'latest' },
-            { name: 'vuetify', deps: ['vuetify'], version: 'latest' },
-            { name: 'vant', deps: ['vant'], version: 'latest' },
+            // { name: 'vanilla', deps: ['vue'], version: 'latest' },
+            // { name: 'ant-design-vue', deps: ['ant-design-vue'], version: 'latest' },
+            // { name: 'anu-vue', deps: ['anu-vue'], version: 'latest' },
+            // { name: 'bootstrap-vue-next', deps: ['bootstrap-vue-next'], version: 'latest' },
+            // { name: 'element-plus@latest', deps: ['element-plus'], version: 'latest' },
+            // { name: 'element-plus@makedopamine', deps: ['element-plus'], version: 'npm:@makedopamine/element-plus' },
+            // { name: 'element-plus@20066', deps: ['element-plus'], version: 'https://pkg.pr.new/element-plus/element-plus@20066' },
+            { name: 'element-plus@2.3.4', deps: ['element-plus'], version: '2.3.4' },
+            // { name: 'element-plus@2.7.8', deps: ['element-plus'], version: '2.7.8' },
+            { name: 'element-plus@2.9.10', deps: ['element-plus'], version: '2.9.10' },
+            // { name: 'element-plus', deps: ['element-plus'], version: 'latest' },
+            // { name: 'naive-ui', deps: ['naive-ui'], version: 'latest' },
+            // { name: 'oku-ui', deps: ['@oku-ui/primitives'], version: 'latest' },
+            // { name: 'quasar', deps: ['quasar'], version: 'latest' },
+            // { name: 'radix-vue', deps: ['radix-vue'], version: 'latest' },
+            // { name: 'vuetify', deps: ['vuetify'], version: 'latest' },
+            // { name: 'vant', deps: ['vant'], version: 'latest' },
 
             // NO TS
             // { name: 'primevue', deps: ['primevue'], version: 'latest' },
@@ -56,7 +62,7 @@ const sample = 1; // less for faster, bigger for smooth numbers
         const folder = path.join(tempPath, library.name);
         if (!fs.existsSync(folder)) {
             fs.mkdirSync(folder);
-            const dependencies = { vue: 'latest' };
+            const dependencies = { vue: '3.5.13' };
             for (const dep of library.deps) {
                 dependencies[dep] = library.version;
             }
